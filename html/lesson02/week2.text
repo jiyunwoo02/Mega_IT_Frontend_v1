@@ -1,0 +1,196 @@
+<< 1주차 >>
+마크업 언어 -> HTML, XML 
+- <명령어 속성 = "값">콘텐츠</명령어> : 요소 (HTML의 작은 단위)
+
+DTD 선언 <!DOCTYPE HTML> -> html5 버전
+<head></head> : 준비, 설정
+  - <meta charset = "utf-8">, <title></title>
+<body></body> : 콘텐츠 (브라우저에서 보이는 내용)
+  - inline 요소(text와 동일) 
+    ~ <hn> 논리성, <p> 작은 그룹 / 단락 (<br> 줄바꿈), 내용그룹 <ul><ol>(<li>)<dl>(<dt><dd>) => block 요소
+  - 조상부모자식 관계(종속관계), 형제관계
+</html>
+
+시맨틱 -> 내용, 구조
+<body> 
+  -- header, nav, main(내용 -> article(->main) 광범위, section 좁은범위 => outliner / header, aside, footer),
+  aside(내용), footer(nav, hn 불가능)
+
+목록 안 목록 : <ul><li><ul>...
+
+<< 2주차 0319 >>
+1. 경로 -> 여러 종류 연결 -> 콘텐츠 설정, 준비
+  - 서버 경로 -> 연결점
+  - 절대 경로 : 도메인 / 경로 (작업할 때 사용하지 말 것)
+    *통신경로 => http(s)://도메인명.co.kr/폴더/...
+  - 상대 경로 : 나의 작업 위치 서로의 경로
+    *나의 현재의 위치 / 폴더명 (./폴더명)
+    *나오기 -> (..)사용 -> (./../폴더명)
+
+경로 
+- 기능 : 연결
+- 콘텐츠
+href(웹사이트 연결), src(source의 약자, 소스 가져오기), poster(-> video), ..
+
+(1) href
+<a href = "경로"> 콘텐츠 </a>
+  - a(default 속성) -> 클릭 이벤트 -> href 주소
+  *고유, 공통, default 속성 / default 값(속성) : 처음부터 지정된 값, 생략 가능
+  *target -> 연결 렌더링, _self(default 값), _blank[새 탭 생성 렌더링]
+  *title(공통속성) : 팁으로 알려주는 역할
+
+<a href = "경로" target = "_self" title = "설명">콘텐츠</a>
+<a href = "경로" target = "_blank">
+
+<< 예시 >>
+<a href = "http://www.naver.com" target ="_self">
+
+a -> 사이트특정 페이지
+    파일 연결 -> 브라우저 렌더링 : load -> jpg, pdf
+    브라우저 렌더링x -> 다운로드 : zip, hwp
+    미디어 연결 : 미디어 사용 연결 -> email, tel => emailto : 이메일주소, tel : 전화번호
+
+<< 예시 >>
+<a href = "./data/text.pdf" target = "_blank" title = "PDF화일 이동">
+<a href = "mailto:aaa@naver.com">
+<a href = "tel:010-9999-9999">
+
+(1-1)
+위치 -> 지정 => 요소 -> 이름 -> id, class (이름), name (필요한 값)
+a -> 경로 -> 위치
+
+<요소 id="이름"></요소>
+<요소 class="이름"></요소>
+
+* id > class 우선권이 높다!
+
+id : 1html -> 같은 이름 X / 1요소에 1개 아이디 / #이름 불러들이기(#main)
+class : 1html -> 같은 이름 적용 / 1요소에 여러 개 클래스명 지정 가능 class = "이름1 이름2 이름3" / .이름 불러들이기(.sub)
+
+이름 만드는 방법 : (식별자) 숫자, 알파벳, -, _, $
+  - 숫자 첫글자 금지
+  - 대문자 소문자 다르게 취급
+  - 공간문자는 금지
+  - 낙타기법
+    - mainTitle : 중간 글자 대문자로 (*자바스크립트 많이 사용)
+    - main-title : -로 연결
+    - main_title : _로 연결
+
+<< 2주차 0320 >>
+1. html -> 콘텐츠 ~ 연결 정보, 연결 요소, 속성
+  - a -> click -> href 속성 -> 사이트 주소, 파일, 사이트주소#위치(아이디 값으로), 미디어 정보(->앱) (tel, mailto)
+  - 경로 => 절대, 상대, 서버
+  ./폴더/../
+
+2. 
+  - id : 1html -> 같은 이름x, 1요소 1값, 우선권 (#)
+  - class : 1html -> 같은 이름o, 1요소 여러 이름 사용가능, 낮음 (.)
+  - name : 값 설정 -> 설정, 프로그램 연결, 요소 특별 조건 설정
+
+  - img -> src = "콘텐츠 주소" alt = "미디어 설명글" width -> height = auto width 입력하면 height는 자동 설정값
+    - width, height 값 둘 다 설정값을 작성하려면 둘 사이 비례값 맞아야한다.
+    - or 이미지 크기 기본 <- css 설정
+
+  - 요소 속성 설정 스타일 : 1순위!
+  - css 설정
+
+  - 표준안 -> png, jpg, gif, svg
+
+  - alt -> 대체text
+    - 순서 -> 시맨틱요소
+
+    <figure>                    <figure>  
+    source                      <figcaption></fidcaption>
+    <figcaption></fidcaption>   source 
+    </figure>                   </figure>   
+
+    => img, audio, video, table, 인용문구
+    (blockquote)
+
+3. 
+- flash -> 기능
+
+- map : 이미지 위에 덮어쓰기
+<img src ="" alt = ""> : usemap = "#이름"
+<map> : name = "이름" => usemap 과 map 에서의 이름 동일하게 해야 연결 가능
+  <area 모양 위치 연결정보 />
+</map>
+
+- 모양 : shape
+  -> rect(x1, y1, x2, y2), circle(x1, y1, radius), poly(x1, y1, x2, y2, x3, y3, x4, y4)
+
+- 
+<video 옵션>
+  <source>
+</video>
+
+  - src -> video, source : 미디어 요소 경로
+  - autoplay, loop, controls, muted : 논리속성 -> 속성 : true, false
+  - poster : 미리 이미지(-> video 로드)(이미지 가상으로 보여줌) -> 이미지경로 
+  - preload -> 데이터 정보 업로드 문제 시점
+    - 비디오 -> 설정, 종류, 환경 => 정보 -> 데이터 넘어온다 -> 렌더링 -> 비디오 play
+      - auto, autoplay -> 모든 사용자 비디오 관람
+      - 서버(비디오) -트래픽-> play
+
+- 
+<audio 옵션>    
+  <source>
+</audio>
+
+- 코덱 -> 파일생성
+
+- web -> MPGE
+- video : MP4, webm, ogv, MP3
+  - 저작권, 메모리, 압축률
+
+- MINE 타입 -> type = "??/??"
+
+- 웹접근성 -> 사용자가 원하는 컨셉
+
+- track -> 정보, 옵션
+  - kind -> caption, chapters, descriptions, metadata, subtitles
+  + label, src, srclang
+
+
+- audio -> src, preload, autoplay, loop, controls, muted
+
+4. stylesheet
+-> ***.css -> html 요소 비주얼 프로그램
+
+< h1 style=""></h1>
+<style>
+  css 코드  
+</style>
+
+<link rel="" <- stylesheet
+      href="" <- css 경로
+      type="text/css">
+
+<style>
+  @import url('경로');
+</style>
+
+/* 주석 */
+
+서식
+선택자{
+      속성 : 값 단위;
+      속성 : 값 단위;
+}
+
+css -> 환경 영향
+      영역 -> 자식
+              종속요소
+
+선택자-> 타입 : element
+        이름 : #아이디
+               .클래스
+        관계 : 부모, 자식, 종속
+                - 부모 > 자식
+                - 조상(부모) 자식, 손자
+
+              형제관계
+              + 기준형제 + 
+              -
+
+( *ul의 자식은 li만 가능하다 -> ul>li>p )

@@ -1,0 +1,98 @@
+(1) 
+프론트엔드 - 웹개발 - 브라우저 직접으로 보이는 부분
+html / css / javascript + 라이브러리
+웹 사이트, 웹 문서 -> 정보[콘텐츠](text) 주고받기
+
+html : 정보 종류, 구조, 기능
+css : 비주얼 - 체계화되어 있음 - UX/UI
+javascript : effect, 기능 -> data
+
+markup 언어 : 필요로 하는 컨텐츠 감싸주는 역할 
+-> <명령어>_콘텐츠_</명령어>
+
+<시작명령어 속성 = "값">콘텐츠</끝명령어>
+
+<html>
+    <head></head> -> 준비, 설정
+    <body></body> -> 콘텐츠
+</html>
+.html 확장자로 저장
+
+(2)
+- <시작> : </끝> 없는 (빈요소 형식) ex) <img>
+- <시작 속성 = "값" 속성 = "값"></끝>
+
+- 브라우저 -> 렌더링 : 서버 html	
+	버전 -> 서식
+버전 알려줌 => DTD 선언 : <!DOCTYPE HTML> -> HTML5버전
+
+	HTML 4.0
+웹표준 _ XHTML 1.0
+	HTML5
+
+strict 엄격형
+호환형
+
+(3) 단축키
+(Alt L + Alt O : 실행)
+ctrl + enter : 다른 파일 측면에서 열기 / 아니면 드래그해서 직접 조정 가능
+html:5 입력하고 엔터하면 기본형 등장 
+ctrl + +/- : 화면 확대/축소
+<명령어> 입력하면 자동 </명령어> 생성
+h1, head, body, .. 입력하고 엔터하면 -> 요소 등장 (명령어만 입력해도 자동으로)
+입력하고 싶은 줄에 주석(설명, 구조 표시) : ctrl + / 
+
+(4)
+주언어 -> html lang = "ko" : 여기서 lang은 공통특성 _ 어느 요소든지 사용 가능
+*특별속성 : 특정한 요소 사용
+*default : 기본 속성 -> 요소 기본값 내재되어있음
+
+text -> 0, 1 -> 형식 [인코딩]
+media -> viewport -> 브라우저(모바일)
+
+title : 사이트 제목 (tab)
+html -> 내용 -> 제목 -> 즐겨찾기 / 검색 / 준비하기
+
+(5)
+태그명, 속성명 - 대소문자
+react <meta/> -> 스크립트
+논리 속성 : true, false -> 속성의 역할
+<video loop></video> : loop에 true / false
+-> 속성명 ~ true, 속성명 x ~ false
+속성  = "값" loop = "loop" 
+
+(6)
+Entity Code 엔티티코드 -> html _ 특수 부호 컴퍼트
+브라우저 -> 특수코드 렌더링
+
+공백 &nbsp;
+@ 	&#64;
+copyright 	&copy;
+< : less than 	&lt;
+> : great than 	&gt;
+& 	&amp;
+
+(7)
+MINE 타입 -> 서버설정 ex)  이미지 : img, png
+- 형식의 정의
+
+현재 MINE ; 생략가능 => type = 소스 / 종류(;)
+mp3 -> type = audio/mp3
+mp4 -> type = video/mp4
+script => type = text / javascript
+
+(8)
+콘텐츠 -> text 콘텐츠
+	hn -> 제목 요소 (n = 1 ~ 6)
+	~ 등급 : 주요성, 큰 구조 / 작은 구조
+	글자크기 ->  비주얼
+
+html -> 스타일 default 값 브라우저 값
+논리성 h1->h2->h3->h4->h5 중간 건너뛸 수 없다
+
+스토리보드 -> 메뉴얼
+단락 -> p ->  내용 묶음
+br -> text 강제 줄 내림
+inline 요소(text 같은 요소) 줄내림
+hr -> 선 나타남
+리스트요소 : ul, ol, dl

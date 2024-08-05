@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DOM</title>
+
+</head>
+
+<body>
+<script>
+    // 책 -> 시스템: 이름, 저자, 현재 부수
+    //              기능 -> 이름 저자 -> 리스트 출력
+    //              부수 -> 1씩 추가
+
+    const book = {
+        title : 'javascript',
+        actor : 'A 작가',
+        num : 1,
+        list : function(){
+            document.write(
+                
+            // ` => object01.html과 동일하게 출력
+            // <p>
+            //     책 제목 : ${book.title} <br>
+            //     작가 : ${book.actor} <br>
+            //     현재 부수: ${book.num} <br>
+            // </p>
+            // `
+
+            `
+            <ul>
+                <li>책 제목 : ${this.title} <br> </li>
+                <li>작가 : ${this.actor} <br> </li>
+                <li>현재 부수: ${this.num} <br> </li>
+            </ul>
+            `
+
+            )
+        }
+    }
+    book.list();
+</script>
+</body>
+
+
+
+</html>

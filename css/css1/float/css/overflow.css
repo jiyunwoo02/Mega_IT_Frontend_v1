@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+p{width:150px; height:100px;
+float:left;
+margin-right:50px;
+border:2px solid #666;}
+
+.box_01{
+  /* height: auto; 콘텐츠에 맞게 들어간다 */
+  /* overflow: visible; */
+  overflow: hidden;
+}
+.box_02{
+  overflow: scroll;
+}
+.box_03{
+  overflow: auto;
+}

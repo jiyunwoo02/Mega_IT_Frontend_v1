@@ -1,0 +1,171 @@
+0416 진도
+
+1. < Review >
+타이포그래픽
+- box -> 영역 -> element 크기, 영향 미치는 면적
+- layout 
+=> 요소의 성격적 변화
+- 장식(배경)..
+- effect
+
+block 
+세로레이아웃 _ default 스타일 : 크기 여백 / reset 작업
+가로 : default -> 부모의 요소 꽉차는 성격
+block>inline
+  >block -> ul>li dl>dt,dd
+hn,p
+
+inline 
+요소 -> text 단어형식
+가로 -> 콘텐츠 크기 (text,img) 크기 제어 x
+span, em
+
+html -> ( ( element, attribute, text ) -> node )
+
+inline-block (main+sub) -> img,video -> 크기제어+외부여백(margin : 세로)
+
+2. < lesson >
+
+(1)
+box 
+- 콘텐츠 box
+border-box > padding-box > content-box > <시작>콘텐츠<끝>
+외부여백 margin-box
+
+width 가로,height 세로,padding (top,right,left,bottom),border-width 굵기/style 선 종류/color 칼라 (")
+margin(")
+
+요소의 박스 -> content/padding/border-box
+box-sizing = width, height 기본 box의 기준 변경
+
+border 기본적인 부분
+- border-width/style/color
+
+(2)
+코너
+1 : top - left
+2 : top - right
+3 : right - bottom
+4 : bottom - left
+
+border-방향-radius
+
+(3)
+세로 : 안의 여백
+가로 : 안의 여백, 밖의 여백
+margin 겹침현상 - top vs bottom : 큰 게 이긴다
+
+[1] 방향 한 방향
+[2] 
+margin의 default값은 0으로 보고 들어간다
+
+(4)
+layout
+고전 -> float, position
+display: basic
+flexbox
+
+환경영향
+속성그룹 완성
+float -> 분류물 -> 위치 변경
+float : none / left, right
+clear : none / left, right, both
+overflow -> 선택 -> 크기, 위치 성격
+  - 안의 요소(자식)
+  위치, 크기
+3. < 실습 >
+
+(1)
+p -> width : auto
+auto -> 속성에 따라 기준이 달라진다
+width : auto -> 부모에 꽉차는 성격
+padding : auto -> 0
+margin : 요소
+
+기본값 -> default -> 설정 x => 사용자값 설정
+
+(2)
+한 방향 -> top right bottom left
+속성명 -> 한단어 단어-단어
+한단어-방향 -> padding-top margin-top
+단어-방향-단어 -> border-top-width
+
+기본형 속성 : 시계방향 top right bottom left
+
+top     right
+=bottom =left
+top
+=bottom, left, right
+
+10px 20px 10px 30px -> 10ox 20px 10px 30px
+10px 20px 30px 20px -> 10px 20px 30px
+
+(3)
+border-radius: x / y;
+border: x1 x2 x3 x4 / y1 y2 y3 y4;
+
+0417 진도
+
+1. < Review >
+
+box->content/padding/border-box
+~width, height
+
+width height padding margin border-width/style/color
+padding 안의 여백 -> top right bottom left
+  top=bottom=right=left
+  top right=left bottom
+  top=bottom right=left
+  속성-방향
+  속성-방향-속성
+
+padding -> 안의 여백
+border 안으로 배경 (border-border)
+
+
+2. < lesson >
+
+(1)
+사각형 어느 방향에 둘 거야?
+- left right
+float:left; float:right;
+자기 주변 여백
+margin-left:50px margin-right:50px
+
+사각형 1 2 3 있다.
+순서 1 3 2
+1 float:left
+2 float:right
+3 float:right
+
+(2)
+- 자신의 크기제어
+- 나의 자식 크기, 위치
+- 문제 해결 : visible, auto, scroll, hidden
+
+reset -> 연결
+- block 여백의 정리
+- 요소 기본 설정 -> 없애기
+reset 파일 이용 -> 기본, CDN -> 주소 링크 작업
+reset -> 나의 스타일 잘 사용
+
+(3)
+position -> 공중부양
+: 누구 기준? 
+- 좌표점 속성
+X left:right:택1
+Y top:bottom:택1
+
+position:요소성격
+  static 
+  relative 선택자 기본 위치 
+  fixed 브라우저
+  absolute : 부모, 조상 position(relative, absolute, fixed) 요소
+정확한 좌표 값 나타내주기
+
+position 좌표속성 층변화
+relative 좌표점 x
+relative -> 0 0
+absolute fixed -> 공중부양 좌표값 필수적
+
+z-index

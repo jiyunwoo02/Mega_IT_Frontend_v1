@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector</title>
+  <style>
+    ul>li#main+li{
+      background-color:orange;
+    }
+
+    ul>li#main~li{
+      color: green;
+      font-size: 45px;
+    }
+  </style>
+</head>
+<body>
+  <!-- div>ul>li*5 -->
+  <div>
+    <ul>
+      <li>sample01</li>
+      <li id="main">sample02</li>
+      <li>sample03</li>
+      <li>sample04</li>
+      <li>sample05</li>
+    </ul>
+  </div>
+</body>
+</html>

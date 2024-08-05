@@ -1,0 +1,239 @@
+[[ 0402 진도 ]]
+1. Review
+< font >
+font-family -> 우선순위, 대표패밀리체
+size -> 단위 -> px, %, em 기준(부모)
+weight 
+style 
+variant 
+line-height : 행간 size 위아래 공간 폭 길이
+
+weight style variant size/line-height family
+default 생략, size, family 생략 불가
+
+< text >
+text-indent -> 블록요소 우주보내기
+text-align 정렬 -> block 성격
+vertical-align -> inline 성격
+( inline / inline-block / block )
+text-decoration : 기본 none
+text-transform 
+letter-spacing 간격
+word-spacing
+white-space -> <pre></pre>
+
+< table >
+table ~ thead th / tbody / tfoot
+  tr - td / th - tr
+row, col, cell
+세로레이아웃 ( 세로 하나가 cell ), 가로 코딩
+  - colgroup <colgroup span=""></colgroup>
+  - <td colspan="2"></>, <td rowspan="2"></>
+
+2.Lesson
+음성브라우저 -> 내용
+th hd / scope th -> 방향
+< th scope="col" >
+< th scopre=""></th>
+
+디버깅 -> 요소 체크
+
+< form >
+형식, 설정 규칙
+브라우저 / 백엔드 프로그램 / 서버 - DB : 데이터베이스 / 프론트 데이터 관리 -> 영구적, 반응 완벽하지는 않다
+
+<form action="" method="">
+
+- action 데이터(가) 보낼/거쳐갈 페이지의 주소
+  -> html 중간주소
+- method 데이터 전송 방법 -> post, get, 다른 여러 방법(메뉴얼, 비워두기)
+  - post 
+  - get
+
+<fieldset>
+  <legend>제목</legend>
+  <label></label> 
+
+    (1) 명시적 
+    => <label for=""></> <폼의 컨트롤 요소 id="">
+    (2) 암묵적
+    => <label>이름<폼의 컨트롤 요소>..
+
+  <폼의 컨트롤 요소>
+</fieldset>
+</form>
+
+<fieldset>
+<legend>그룹이름</legend>
+</fieldset>
+
+- label form 컨트롤 요소
+
+- 암묵적 레이블
+<label for="이름"></label>
+<form의 컨트롤 요소> <- id="이름", 위 label의 이름과 동일하면 연결된다
+
+<label>이름<폼의 컨트롤 요소><></label>
+
+<input type="subimt"> -> 데이터를 검증해 보낸다
+  a->click->href
+  : submit->click->action
+
+<input type="reset"> -> 데이터 초기화
+
+id, for
+value -> 초기값, 버튼 이름
+id -> 이름 만들기
+name -> 값을 지정
+
+<input type="text" id="userId" name="userId">
+- id 이름
+- name 값 -> 설정 변경 : front, 값 작업 : backend
+
+input -> type : text / 선택 / 버튼 / 기타
+- text : text password
+  -> text >>  email, url, tel, date, month, week, time, datetime-local, number, range
+- 선택 : radio(택1) checkbox(다중선택)
+- 버튼 : submit reset button image
+- 기타 : file hidden
+
+속성 : id name value placeholder
+  - text -> maxlength, minlength
+
+disabled -> 사용불가능
+hidden -> 숨기기
+readonly
+
+max
+min
+value
+date->YYYY-MM-DD
+date->month->week->time
+datetime->local
+
+form 
+-> method action fieldset legend label(명시/암묵적) 
+-> input(type -> text password search, 개인정보 -> url email tel, 시간 -> date month week time datetime-local) 
+id name value max/min-length max/main placeholder readonly disable hidden
+
+text -> 데이터 -> "string" "number"
+number 숫자형
+range 직선 위 슬라이드형
+
+선택 
+- radio -> 그룹
+- checkbox
+
+autoface -> 1html 1개
+required -> 필수속성
+autocomplete -> 자동완성
+submit -> 값을 기억
+default : on, off
+
+<select> <- size : 보이는 개수 (기본 1개)
+  <option value="입력될 데이터">리스트이름</option>
+  <option value="입력될 데이터">리스트이름</option>
+  <option value="입력될 데이터">리스트이름</option> <- selected
+  <option value="입력될 데이터">리스트이름</option>
+</select>
+
+
+[[ 0403 진도 ]]
+
+1. Review
+form->형식
+<form action="" method="">
+<fieldset>
+<legend>제목</legend>
+</fieldset>
+</form>
+
+이름 
+- 명시적 방법 <label></label> <input></input> for와 id 동일
+- 암묵적 방법 <label>이름<input>이름</label>
+
+form.fieldset-> block : ul>li, ol>li
+label->inline : p
+폼의 컨트롤 요소->inline-block : dl>dt,dd
+input type _ text,password,search/url,tel,email/date,month,week,time,datetime-local
+/number,range/radio,checkbox/submit,reset,button,image/file,color,hidden : div
+
+checked placeholder autofocus required autocomplete(on/off)
+
+<select> <- size
+<option value="">리스트이름</option> <- selected
+
+
+2. Lesson
+
+(1)
+<optgroup label="">
+<option value="">리스트이름</option> <- selected
+</optgroup>
+
+(2)
+list="" id
+<input type="">
+<datalist>
+  <option>리스트이름</option>  <<- option에 value값 작성하지 마라
+  <option>리스트이름</option>
+</datalist>
+
+(3)
+<textarea> <- cols, rows
+</textarea>
+
+value 버튼이름
+<input type=""> submit rreset button image
+<button type="submit">버튼이름</button> reset button
+
+<progress></progress> 진행되는 상황 -> max value (min 없음)
+<meter></meter> 결과값 -> min max value
+
+(4)
+강조 -> 규칙, 필요한 내용
+-> strong, em
+
+인용문
+-> q[inline], blockquote[block] : cite 속성
+=> cite( [요소, 속성] : 출처 내용 ) 속성 사용
+
+축약
+-> abbr
+=> title 속성 사용
+
+두문어
+-> acronym title="원본이름"
+
+수정
+-> ins del (insert delete)
+=> cite, datetime 속성 사용
+
+시간
+-> <time datetime=""></time>
+
+주소
+-> 저작권정보 address
+
+details / details open / summary
+
+mark (검색 - 완전 일치) -> 형광펜
+b (검색 - 유사 일치, 차별화) -> 두꺼운 글씨
+i 객관:배이름 관용어 생각, 주관:다른 분위기 -> 휜 글씨체
+small 작은 저작권정보 -> 작은 글자크기
+
+사과를 영어로 하면 apple입니다.
+<i lang="en"> </i>
+
+ruby, rp, rt
+
+컴퓨터 -> <pre></pre>
+용어 -> <code></code> 명령어 <samp></samp> 시스템 <kbd></kbd> 키보드값 <var></var> 변수이름,변수값
+<bdo></bdo> 방향 바꾸기 <- dir = "ltr / rtl" (left/right to right/left)
+<br> 강제로 줄 내리기
+
+string, em, q-cite, blockquote-cite, cite, abbr-title, ins-cite/datetime, del-cite/datetime, time-datetime, address
+mark, b, i(배이름, 전문용어, 관용어, 정신), small
+details->summary
+ruby->rt, rp(안 보이게)
+code, samp, kbd, var

@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math:style</title>
+<style type="text/css">
+body { font: 12px "나눔고딕"; }
+#wrap { position:relative; width:700px; height:500px; background:#0CF; }
+#box { position:absolute; left:0px; top:0px; width:50px; height:50px; background:#ff6; }
+</style>
+
+<script type="text/javascript">
+
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+   <div id="box"></div>
+</div>
+
+<script>
+const btn = document.querySelector('#box');
+btn.addEventListener('click',play)
+
+function play(){
+   let bLeft =Math.floor(Math.random()*650) ;
+   let bTop = Math.floor(Math.random()*450) ;
+   console.log(bLeft , ':' , bTop)
+    btn.style.top = bTop +'px';
+    btn.style.left = bLeft +'px';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>>
+	<meta charset="utf-8">
+	<title>imagemap</title>
+</head>
+<body>
+<p>
+	<img src="./pic/map.gif" alt="세부설명" usemap = "#box"> 
+	<map name="box">
+		<area 
+			shape="rect" 
+			coords="53,87,162,182"
+			href="http://www.naver.com"
+			target="_blank"
+			title="네이버이동"
+			alt="네이버이동"
+		>
+
+		<area
+			shape="circle"
+			coords="273,132,42"
+			href="http://www.daum.net"
+			target="_blank"
+			title="다음사이트이동"
+		>
+	</map>
+</p>
+
+<!-- image generator : imp 유틸사용 : https://www.image-map.net/ -->
+<p>
+	<img src="./pic/map.gif" alt="이미지맵 유틸 이용" usemap="#imgdata">
+	<!-- image map generator에서 작성해준 코드 (좌표는 도형 꼭짓점 / 원은 중심이랑 반지름 눌러서) -->
+	<map name="imgdata">
+    <area target="_blank" alt="네이버이동" title="네이버이동" href="http://www.naver.com" coords="53,85,165,179" shape="rect">
+    <area target="_blank" alt="다음사이트이동" title="다음사이트이동" href="http://www.daum.net" coords="273,133,50" shape="circle">
+    <area target="_blank" alt="네이트이동" title="네이트이동" href="http://www.nate.com" coords="419,87,366,112,400,172,475,172,473,142" shape="poly">
+</map>
+</p>
+
+<!-- 유틸2  -->
+<p>
+	<!-- usemap 이름 앞에 # 써줘야 한다! 까먹지 말기 -->
+	<img src="./pic/map_util.png" alt = "이미지앱 유틸 이용 응용" usemap="#image-map">
+	<!-- 기울어진 사각형은 poly 마름모꼴로 인식한다! -->
+	<map name="image-map">
+    <area target="_blank" alt="네이버이동" title="네이버이동" href="http://www.naver.com" coords="51,38,128,114" shape="rect">
+    <area target="_blank" alt="다음사이트이동" title="다음사이트이동" href="http://www.daum.net" coords="122,324,61" shape="circle">
+    <area target="_blank" alt="네이트이동" title="네이트이동" href="http://www.nate.com" coords="259,137,207,189,259,241,312,189" shape="poly">
+</map>
+</p>
+
+</body>
+</html>

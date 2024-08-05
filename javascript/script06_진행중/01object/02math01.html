@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math:basic</title>
+<script type="text/javascript">
+
+</script>
+</head>
+
+<body>
+<script type="text/javascript">
+//2*2*2 : pow
+// const num = Math.pow(2,3);
+// console.log(num);
+
+//무작위:random
+// document.write(Math.random(),'<br>');
+//0~최대의 숫자 -> 0 ~ 600
+// document.write(Math.random()*600 , '<br>')
+
+//최소 ~최대의 숫자console.log(Fday)
+//Math.random()*(max-min)+min; -> 100 ~ 600
+// document.write( (Math.random()*500)+100 , '<br>')
+
+// 반올림:round, floor, ceil
+//floor
+//ceil
+document.write('ceil : 4.678 -> ' , Math.ceil(4.678), '<br>');
+document.write('ceil : 4.345 -> ' , Math.ceil(4.345), '<br>');
+
+document.write('floor : 4.678 -> ' , Math.floor(4.678), '<br>');
+document.write('floor : 4.345 -> ' , Math.floor(4.345), '<br>');
+
+document.write('round : 4.678 -> ' , Math.round(4.678), '<br>');
+document.write('round : 4.345 -> ' , Math.round(4.345), '<br>');
+
+let Ram =Math.floor(Math.random() * 350 )
+console.log(Ram)
+
+//최대:max -> 정렬이 아님 -> string, number 형의 인식
+console.log(Math.max(234,456,111,1111,'11111','11'))
+
+// 최소:min -> 정렬이 아님
+console.log(Math.min(234,456,111,1111,'11111','11'))
+
+
+</script>
+</body>
+</html>

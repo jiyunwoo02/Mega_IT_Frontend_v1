@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date</title>
+</head>
+<body>
+<script>
+  let Dday = new Date(500000000);
+  console.log(Dday)
+
+  // 'YYYY-MM-DDThh:mm:ss'
+  const Eday = new Date('2019/10/10');
+  console.log(Eday)
+  const Fday = new Date('2022-02-05T03:12:12');
+  console.log(Fday);
+// YYYY,MM-1,DD,HH,MM,SS
+  let Gday = new Date(2019,09,10);
+  console.log(Gday)
+
+  Fday.setFullYear(2000)
+  console.log(Fday);
+  Fday.setMonth(10)
+  console.log(Fday);
+
+
+
+</script>
+</body>
+</html>

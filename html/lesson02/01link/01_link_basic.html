@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>링크</title>
+</head>
+
+<body>
+	<!--경로 target title-->
+	<h1>경로</h1>
+	<dl>
+		<dt>절대경로</dt>
+
+		<!-- 네이버 가 푸른색을 띄며, 클릭하면 내가 있던 탭이 네이버 사이트로 변경됨 -->
+		<dd><a href="http://www.naver.com" target="_self">네이버</a></dd>
+
+			<!-- 네이버 가 푸른색을 띄며, 클릭하면 새로운 탭이 나타나 네이버 사이트로 이동 -->
+		<dd><a href="http://www.naver.com" target="_blank" title="네이버이동">네이버</a></dd>
+
+		<dt>상대경로</dt>
+			<!-- .을 앞에 써줘야 한다! 그래야 연결됨 -->
+		<dd><a href="./data/site01.html" target="_blank" title="사이트이동">sample01</a></dd>
+	</dl>
+	<!-- 여러 화일링크-->
+	<h1>화일링크</h1>
+	<dl>
+		<dt>화일연결</dt>
+		
+		<dd><a href="./data/text.pdf" target="_blank">sample PDF화일</a></dd>
+
+		<dt>zip화일 연결</dt>
+		<dd><a href="./data/text.zip">sample ZIP화일</a></dd>
+
+		<dt>img화일 연결</dt>
+		<dd><a href="./data/pic_09.jpg" target="_blank">sample 이미지화일</a>s</dd>
+	</dl>
+	<!--미디어링크-->
+
+	<h1>화일링크</h1>
+	<dl>
+		<dt>메일링크</dt>
+		<!-- mailto:메일 주소 -->
+		<dd><a href="mailto:aaa@naver.com">aaa&#64;naver.com</a></dd>
+			<!-- &#64;는 @와 동일하다 -->
+		<dd><a href="mailto:aaa&#64;naver.com">aaa&#64;naver.com</a></dd>
+
+		<dt>전화번호 링크</dt>
+		<!-- tel:전화번호 -->
+		<dd><a href="tel:010-9999-9999">010-9999-9999</a></dd>
+		<dd><a href="tel:+1123-9999-9999">010-9999-9999</a></dd>
+	</dl>
+
+</body>
+
+</html>

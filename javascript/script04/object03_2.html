@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>생성자함수</title>
+
+</head>
+
+<body>
+<script>
+     생성자함수
+    function Book(title,actor,year){
+        // Book.title = title;
+        this.title = title;
+        this.actor = actor;
+        this.year = year;
+    //     this.list = function(){
+    //         document.write(
+    //             `<p> ${this.title}:${this.actor}:${this.year}</p>`
+    //         )
+    //     }
+    }
+
+    // prototype
+    Book.prototype.list = function(){
+        document.write(
+            `<p> ${this.title}:${this.actor}:${this.year}</p>` 
+        );
+    }
+
+    // 인스턴스
+    // const 인스턴스 이름 = [new Book(),new Book(),new Book()]
+    const it = [
+        new Book('photoshop','A작자',2021),
+        new Book('javascript','B작자',2022),
+        new Book('excel','C작자',2020)
+    ]
+
+    // 사용
+    for(let item of it){
+        item.list();
+    }
+
+</script>;
+</body>
+
+
+
+</html>

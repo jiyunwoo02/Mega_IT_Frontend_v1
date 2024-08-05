@@ -1,0 +1,85 @@
+0522 Lesson
+
+1. Review
+함수 -> 객체 -> 시스템
+내장형 객체
+매서드 -> 기본형식(함수 -> 용도)
+배열(Array): 만드는 방법[프로토타입, 인스턴스], 속성, 메소드
+- 선언 이름  = new Object(), Array()
+- length(): 원소 갯수
+- concat() shift() unshift() pop() push()
+- splice() slice() sort() join()
+
+*인수의 콜백함수가 들어간다
+*매개변수 -> item, index, array
+- forEach(function(){})
+- map(function(){})
+- filter(function(){})
+
+유사배열 -> 선택 -> querySelector(All)
+
+2. Lesson
+forEach() -> onclick() <button>
+querySelectorAll('button') -> 작업
+이벤트 -> 실행문
+forEach() -> 내가 클릭한 버튼 -> onclick -> 작업 실행문 -> 함수연결 function(){}
+forEach() -> 이벤트 {} -> 함수 안, 객체 안 자신 지정
+    기본 -> 오브젝트(대명사처럼 지칭한다 this) -> 클릭한 당사자, 작업하고 있는 당사자
+
+선언 이름 = new Object()
+이름.속성명 = 데이터;
+이름.매서드 = function(){}
+
+선언 이름 = {
+    속성:데이터,
+    속성:데이터,
+    메서드:function(){ }
+}
+
+체계 - function 이름(*매개변수 받아올 수 있다){
+    객체.속성 = 매개변수명;
+    객체.매서드 = function(){}
+}
+
+객체 프로토타입 메서드 = function(){}
+인스턴스
+    선언 인스턴스 이름 = new 객체이름(인수,인수,인수)
+    배열 - 반복 메소드
+
+기본형 -> 체계
+선언 이름 = new Object();
+이름.속성 = ;
+이름.매서드 = function(){ };
+
+선언 이름 = {
+    속성:데이터,
+    매서드:function(){}
+}
+
+리터널 -> 데이터 관리
+{
+    속성:데이터,
+    속성:데이터,
+    속성:데이터
+}
+*원시 데이터 -> string, number, boolean
+*참조형 데이터 -> function(){}
+
+생성자 함수 -> 매개변수, 인수
+    대문자 첫글자
+
+function 객체이름(매개변수,매개변수){
+    this.속성 = 데이터(매개변수 통해서);
+    this.메소드 = function(){}
+}
+
+객체.prototype.매서드 = function(){}
+
+class 이름{
+    *데이터 정리 
+    constructor(데이터){속성} 속성 = 데이터 -> constructor.function(){}
+
+    *메서드(){
+        실행문;
+    }
+}

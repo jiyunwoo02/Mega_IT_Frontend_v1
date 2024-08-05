@@ -1,0 +1,111 @@
+0521 javascript
+
+1. Review
+
+javascript 웹개발 -> trande -> html css javascript
+dom 변화 -> data
+javascript 기본문법: 변수(데이터 생성), 연산자, 제어문, 함수, 객체시스템
+데이터 
+-> 원시데이터: string number boolean undefined null
+-> 참조데이터: 함수, 객체, 배열
+
+함수-> 기능, 실행문의 그룹
+- 내장함수 -> 브라우저
+- 사용자함수
+이름값 -> function 이름(){}
+        선언 이름 = function(){}
+() 함수식 -> (function(){}()), ..
+function 이름(매개변수){실행문;}
+
+화살표함수 
+(매개변수)=>{실행문}
+()=>{실행문}
+매개변수=>{실행문}
+(매개변수,매개변수)=>{실행문}
+(매개변수)=>{실행문;}
+(매개변수)=>{return 데이터;}
+
+2.Lesson
+
+<img src="./image/주소변수.png" alt="이미지 번호">
+
+전역/지역 객체, 변수, 함수/지역
+전역 -> 지역 사용가능
+지역 -> 전역 사용불가능
+
+객체 
+-> 내장객체 -> 브라우저객체 => 기본 document window -> 배열 string number math date
+-> 사용자객체 -> 내가 만들기 -> 왜 사용 목적
+=> 속성 -> 데이터 정리, 매서드 -> 이름 = function(){}
+
+시스템 객체 -> 체계 나의 사용변경
+프로토타입 인스턴스
+
+내장객체 -> date 체계 -> 속성, 메서드
+-> 나의 date 이름 선언
+-> 인스턴스, 선언 이름 = new 객체이름();
+
+배열
+concat()
+삭제: shift()
+추가: unshift()
+splice(): 기존 배열 변경 
+    -> splice(1,3): 1~3까지 없애기
+    -> (1,3,추가item,추가item)
+slice(): 새로운 배열 만들기
+pop() push()
+join
+sort()
+
+forEach()
+map()
+filter()
+메서드(인수) -> 콜백함수
+
+실행문 -> 작업 결과물
+function(){실행문 그룹} : 작업 진행 -> 새로운 배열
+() => {} : 작업 진행 -> true 환경 -> 새로운 배열
+
+function(매개변수(item),매개변수(index),매개변수(array)){실행문}
+
+<img src="" alt="">
+color.forEach(function(){})
+
+1.map -> 새로운 배열
+배열.map(function(item,index,array){
+    실행문
+})
+
+2.filter => 새로운 배열로 출력
+배열.filter(function(){
+    작업
+    조건 -> true
+})
+
+array => .length
+.concat()
+.shift() .unshift()
+.pop() .push()
+.splice() .slice()
+.join()
+.sort()
+.forEach()
+.map()
+.filter()
+
+for문 -> 배열[i]
+
+for index -> index
+for of -> item
+
+for(let 선언 in 배열){
+    배열[선언이름]
+}
+
+for(선언 이름 of 배열){
+
+}
+
+유사배열 -> event -> forEach() (<-복수)
+기본 매서드->
+모든 매서드 작동이 되지는 않는다

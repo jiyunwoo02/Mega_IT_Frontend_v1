@@ -1,0 +1,116 @@
+0528 Lesson
+
+1. Review
+배열 
+데이터 -> 메모리
+이름: key -> 이름, 이름(영역), 이름[방의 번호: index], 이름[특별한 key: 속성]
+데이터: value
+매서드 -> 명령어(인수)
+    function(){}
+
+객체 -> 시스템
+Object
+선언 이름 = new Object()
+            new Date() -> 내장객체
+    속성 = 데이터;
+    이름 = function(){}
+
+선언 이름 = {
+    속성: 데이터, <- this 대명사 오브젝트 할당
+    속성: 데이터,
+    이름: function(){} -> 이름(){실행문;}
+}
+
+생성자함수
+function 객체이름(매개변수,매개변수){
+    객체이름.속성=데이터;
+    this.속성=데이터;
+    this.매서드=function(){}
+}
+객체이름.prototype.매서드=function(){}
+선언 인스턴스= new 객체이름(인수,인수)
+선언 이름 = [ new 객체이름(), new 객체이름(), new 객체이름()]
+
+class 이름{  } 
+    선언 이름 = class{  }
+function 이름(){}
+    선언 이름 = function(){}
+class 이름{
+    constructor(매개변수,매개변수){
+        this.속성 = 데이터;
+        this.속성 = 데이터;
+    }
+    매서드(){}
+}
+constructor:function(){}
+매서드: function(){}
+
+2. Lesson
+DOM -> 선택자
+    getElementById('아이디명')
+    getElementsByClassName('클래스명') -> 2, 3 배열처럼 사용가능 -선택
+    getElemntsByTagName('태그이름')    -> 유사배열
+
+    querySelector('스타일선택자')
+    querySelectorAll('스타일선택자')
+
+    속성
+    innerHTML
+    outerHTML
+
+classList.명령어
+        add('클래스이름')
+        remove('클래스이름')
+        toggle('클래스이름')
+        contains('클래스이름')
+
+getAttribute('속성명')
+setAttribute('속성명', 'value')
+removeAttribute('속성명')
+hasAttribute('속성명')
+
+createElement()
+createTextNode()
+-> 만들기 -> 메모리 -> 후처리
+cloneNode(true) -> 복제 -> 메모리
+    copy -> 넣기
+text
+이동, 추가 -> appendChild()
+
+[ 위치 총 4개 ]
+시작전 before()
+시작 prepend()
+끝나기직전 append()
+끝후 after()
+
+.style 속성 = 'string'
+color
+backgroundColor
+
+Attribute -> getAttribute('style')
+setAttribute('style', ' ')
+
+event -> 개념
+1. 요소
+<요소 이벤트 = 함수()></요소>
+onclick="main()"
+2. 속성처럼
+오브젝트 on이벤트 = 함수 function(){}
+
+오브젝트. onclick = main
+오브젝트.onclick = sub
+
+3.addEventListener('이벤트',value)
+    함수명
+    function(){}
+
+오브젝트.addEventListener('이벤트',value)
+
+이벤트 -> function(이벤트){ }
+stopPropgation() -> 전달 막기
+preventDefault() -> 이벤트 후에 필요한 작업 막기
+    return false; -> 이벤트 -> on - addEventListener() 
+    후반작업이 지정되어 자동으로 작동되는 경우
+    a -> click -> href
+    submit -> click -> action
+

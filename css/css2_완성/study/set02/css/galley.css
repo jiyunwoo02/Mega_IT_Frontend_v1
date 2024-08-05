@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+article{
+  width:660px;
+  margin: 0 auto;
+ padding:10px 0 15px;
+ background-color:#ccc;}
+article>h1{
+  /* width:auto; */
+  margin-bottom:15px;
+  font:bold 32px/50px Arial,sans-serif;
+  background-color:violet;
+  color:#fff;
+  text-align:center;}
+article>ul{
+  /* width:auto; */
+  background-color:green;
+  overflow:hidden;}
+article>ul>li{
+  /* width:145px;-> 이미지 */
+  margin: 0 10px 20px;
+  float:left;
+}
